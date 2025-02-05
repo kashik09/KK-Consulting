@@ -51,12 +51,10 @@ p {
 }
 
 .offcanvas .nav-link {
-    color: #1E1E1E;
     font-weight: 500;
 }
 
 .offcanvas .nav-link.active {
-    color: #FFC857;
     font-weight: bold;
 }
 
