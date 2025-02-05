@@ -25,6 +25,7 @@ p {
 .navbar {
     background-color: #2A2E45;
     padding: 10px 20px;
+    font-size: 1.12rem;
 }
 
 .navbar-toggler {
