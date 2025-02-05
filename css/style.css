@@ -46,6 +46,11 @@ p {
     color: #FFC857 !important;
 }    
 
+.navbar-brand img {
+    height: 3rem;
+    width: auto;
+}
+
 .offcanvas {
     background-color: #2A2E45;
 }
