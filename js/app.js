@@ -16,3 +16,11 @@ form.addEventListener("submit", function (event) {
     alert("Please enter a valid phone number.");
   }
 });
+
+document.querySelector("form").addEventListener("submit", function (e) {
+    const email = document.getElementById("email").value;
+    if (!email.includes("@")) {
+        e.preventDefault();
+        alert("Please enter a valid email address.");
+    }
+});
