@@ -160,17 +160,10 @@ p {
     background-color: #2A2E45;
 }
 
-#phone {
-    width: 100%;
+#error-msg {
+    color: red;
+    display: none;
 }
-
-.iti {
-    width: 100%;
-}
-
-.iti__flag-container {
-    margin-right: 10px;
-}  
 
 footer {
     background-color: #2A2E45;
