@@ -160,6 +160,18 @@ p {
     background-color: #2A2E45;
 }
 
+#phone {
+    width: 100%;
+}
+
+.iti {
+    width: 100%;
+}
+
+.iti__flag-container {
+    margin-right: 10px;
+}  
+
 footer {
     background-color: #2A2E45;
     color: white;
