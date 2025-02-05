@@ -5,17 +5,32 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 
 const form = document.querySelector("#contactForm");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("submitBtn").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent form submission for validation
 
-  if (phoneInput.isValidNumber()) {
-    const phoneNumber = phoneInput.getNumber();
-    // Proceed with form submission or further processing
-    console.log("Valid phone number:", phoneNumber);
-  } else {
-    alert("Please enter a valid phone number.");
-  }
+    const phoneInput = document.getElementById("floatingPhone").value.trim();
+    const countryCode = document.getElementById("countryCode").value;
+    const errorMsg = document.getElementById("error-msg");
+
+    // Define regex patterns for different country formats
+    const phonePatterns = {
+        "+254": /^\+254\d{9}$/, // Kenya: +254 followed by 9 digits
+        "+1": /^\+1\d{10}$/, // USA: +1 followed by 10 digits
+        "+44": /^\+44\d{10}$/, // UK: +44 followed by 10 digits
+        "+91": /^\+91\d{10}$/, // India: +91 followed by 10 digits
+        "+86": /^\+86\d{11}$/ // China: +86 followed by 11 digits
+    };
+
+    // Check if the phone number matches the selected country's pattern
+    if (phonePatterns[countryCode] && phonePatterns[countryCode].test(phoneInput)) {
+        errorMsg.style.display = "none"; // Hide error
+        alert("Phone number is valid!");
+    } else {
+        errorMsg.textContent = "Invalid phone number format for " + countryCode;
+        errorMsg.style.display = "block"; // Show error
+    }
 });
+
 
 document.querySelector("form").addEventListener("submit", function (e) {
     const email = document.getElementById("email").value;
