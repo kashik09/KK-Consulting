@@ -36,11 +36,6 @@ p {
     filter: brightness(1.2);
 }
 
-.navbar-brand .offcanvas-1 img {
-    display: block;
-    height: 0;
-}
-
 .navbar .nav-link {
     color: #F4F7FC !important;
     font-weight: 500;
@@ -63,6 +58,21 @@ p {
 .offcanvas .nav-link.active {
     color: #FFC857;
     font-weight: bold;
+}
+
+.offcanvas .navbar-brand img {
+    display: block;
+}
+
+.offcanvas .btn-close {
+    background-color: #FFC857 !important;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .hero-section {
