@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const promoCheck = document.getElementById("promoCheck");
     const errorMsg = document.getElementById("error-msg");
 
-    // Restore previous inputs from localStorage
     phoneInputField.value = localStorage.getItem("phone") || "";
     emailInput.value = localStorage.getItem("email") || "";
-    promoCheck.checked = localStorage.getItem("promo") === "true"; // Convert to boolean
+    promoCheck.checked = localStorage.getItem("promo") === "true";
 
-    // Save input values on change
     phoneInputField.addEventListener("input", () => {
-        localStorage.setItem("phone", phoneInput.getNumber()); // Save formatted number
+        localStorage.setItem("phone", phoneInput.getNumber());
     });
 
     emailInput.addEventListener("input", () => {
@@ -27,35 +25,31 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("promo", promoCheck.checked);
     });
 
-    // Form validation & submission
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent page reload
+        event.preventDefault();
 
         let isValid = true;
         let message = "";
 
-        // Validate Phone Number
         if (!phoneInput.isValidNumber()) {
             isValid = false;
-            message += "❌ Invalid phone number format.\n";
+            message += "Invalid phone number format.\n";
         }
 
-        // Validate Email (Only Allow Gmail)
         if (!emailInput.value.endsWith("@gmail.com")) {
             isValid = false;
-            message += "❌ Please use a Gmail email address.\n";
+            message += "Please use a Gmail email address.\n";
         }
 
-        // If Validation Passes, Submit Form
         if (isValid) {
-            alert("✅ Form submitted successfully!");
-            localStorage.removeItem("phone"); // Clear saved data on success
+            alert("Form submitted successfully!");
+            localStorage.removeItem("phone");
             localStorage.removeItem("email");
             localStorage.removeItem("promo");
-            form.submit(); // Proceed with form submission
+            form.submit();
         } else {
             errorMsg.textContent = message;
-            errorMsg.style.display = "block"; // Show errors
+            errorMsg.style.display = "block";
         }
     });
 });
