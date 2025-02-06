@@ -87,6 +87,12 @@ p {
 
 .hero-section h1 {
     font-size: 2.5rem;
+    color: #2A2E45;
+}
+
+.hero-section p, .contact-section-text {
+    color: #F4F7FC;
+    font-weight: 645;
 }
 
 .hero-section .btn-primary {
@@ -154,6 +160,14 @@ p {
     background-color: #6DC5D1;
     padding: 50px 0;
     text-align: center;
+}
+
+.contact-section-header {
+    color: #2A2E45;
+}
+
+.contact-section-text {
+    size: 1.12rem;
 }
 
 .contact-section .btn-secondary {
