@@ -1,12 +1,11 @@
 .card-img-top {
-    height: 27rem;
     object-fit: cover;
+    height: 27rem;
 }
 
 body {
-    background-color: #F4F7FC;
     color: #1E1E1E;
-    /* font-family: Arial, sans-serif; */
+    background-color: #F4F7FC;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,13 +17,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    font-size: 1rem;
     line-height: 1.6;
+    font-size: 1rem;
 }
 
 .navbar {
-    background-color: #2A2E45;
     padding: 10px 20px;
+    background-color: #2A2E45;
     font-size: 1.12rem;
 }
 
@@ -38,8 +37,8 @@ p {
 }
 
 .navbar .nav-link {
-    color: #F4F7FC !important;
     font-weight: 500;
+    color: #F4F7FC !important;
 }    
 
 .navbar .nav-link.active, 
@@ -70,18 +69,18 @@ p {
 
 .offcanvas .btn-close {
     background-color: #FFC857 !important;
-    border-radius: 50%;
+    display: flex;
     width: 35px;
     height: 35px;
-    display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .hero-section {
-    background-color: #6DC5D1;
     padding: 60px 0;
+    background-color: #6DC5D1;
     text-align: center;
 }
 
@@ -101,9 +100,9 @@ p {
 }
 
 .hero-section .btn-primary:hover {
+    color: #2A2E45;
     background-color: #FFC857;
     border-color: #FFC857;
-    color: #2A2E45;
 }
 
 .contact-link a {
@@ -119,30 +118,30 @@ p {
 
 .btn-primary {
     background-color: #5271FF;
-    border-color: #5271FF;
     color: white;
+    border-color: #5271FF;
 }
 
 .btn-primary:hover {
     background-color: #FFC857;
-    border-color: #FFC857;
     color: #2A2E45;
+    border-color: #FFC857;
 }
 
 .btn-secondary {
     background-color: #2A2E45;
-    border-color: #2A2E45;
     color: white;
+    border-color: #2A2E45;
 }
 
 .btn-secondary:hover {
-    background-color: #6DC5D1;
     border-color: #6DC5D1;
+    background-color: #6DC5D1;
 }
 
 .services-section {
-    background-color: #F4F7FC;
     padding: 60px 0;
+    background-color: #F4F7FC;
 }
 
 .services-section .card {
@@ -174,14 +173,13 @@ p {
     background-color: #2A2E45;
 }
 
-#error-msg {
-    color: red;
-    display: none;
+#country-code {
+    max-width: 13rem;
 }
 
 footer {
-    background-color: #2A2E45;
-    color: white;
     padding: 20px 0;
+    color: white;
+    background-color: #2A2E45;
     text-align: center;
 }
