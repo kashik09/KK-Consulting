@@ -1,4 +1,4 @@
-KK-Consulting Web Application
+# KK-Consulting Web Application
 
 ## Live Preview
 See the live application here: [KK-Consulting](https://github.com/kashik09/KK-Consulting).
@@ -25,12 +25,7 @@ Navigate through Home, About and Contact pages using the site menu.
  Fill out and submit the contact form to witness a few of the built in validation features.
  Pull and show form data that is stored using localStorage.
 
-## Future Development
- Adding a services page describing other consulting services
- User authentication and session storage to create unique experience.
- Adding back-end functionality for email notifications upon form submission.
-
-File Structure
+## File Structure
 ```
 KK-Consulting/
 ├── index.html          # Main HTML file
